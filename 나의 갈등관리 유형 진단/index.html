@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 갈등관리 유형 진단</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">리더의 갈등관리</p>
+        <h1 id="page-title">나의 갈등관리 유형 진단</h1>
+        <p class="intro">
+          갈등 상황에서 내가 주로 어떤 방식으로 반응하는지 확인하고, 리더로서 상황에 맞는 대응 방식을 선택해 봅니다.
+        </p>
+      </section>
+
+      <section class="summary-panel" aria-live="polite">
+        <div>
+          <span class="summary-label">완료</span>
+          <strong><span id="answered-count">0</span>/10</strong>
+        </div>
+        <div>
+          <span class="summary-label">주된 유형</span>
+          <strong id="primary-type">진단 전</strong>
+        </div>
+      </section>
+
+      <form id="survey" class="survey" aria-label="갈등관리 유형 진단 문항">
+        <div id="questions" class="questions"></div>
+
+        <section class="result-card" id="result-card">
+          <div class="result-top">
+            <p class="eyebrow">진단 결과</p>
+            <h2 id="result-title">모든 문항을 체크해 주세요</h2>
+          </div>
+          <p id="result-copy">10개 문항을 모두 선택하면 나의 주된 갈등관리 유형과 리더로서 보완할 점이 표시됩니다.</p>
+
+          <div class="progress-track" aria-hidden="true">
+            <span id="progress-bar"></span>
+          </div>
+
+          <div id="score-board" class="score-board" aria-label="유형별 점수"></div>
+        </section>
+
+        <section class="guide">
+          <h2>점수 기준</h2>
+          <p>1점 전혀 아니다 · 2점 아니다 · 3점 보통 · 4점 그렇다 · 5점 매우 그렇다</p>
+        </section>
+
+        <button type="button" id="reset-button">다시 진단하기</button>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
